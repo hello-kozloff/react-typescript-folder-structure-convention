@@ -17,3 +17,7 @@ export type { IInlineProps } from './Inline';
 // Margin
 export { default as Margin } from './Margin';
 export type { IMarginProps } from './Margin';
+
+// Badge
+export { default as Badge } from './Badge';
+export type { IBadgeProps } from './Badge';
