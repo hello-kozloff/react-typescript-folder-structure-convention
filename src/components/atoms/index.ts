@@ -17,7 +17,3 @@ export type { IInlineProps } from './Inline';
 // Margin
 export { default as Margin } from './Margin';
 export type { IMarginProps } from './Margin';
-
-// MenuItem
-export { default as MenuItem } from './MenuItem';
-export type { IMenuItemProps } from './MenuItem';
