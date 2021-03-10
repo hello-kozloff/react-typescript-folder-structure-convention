@@ -26,6 +26,8 @@ export interface IInlineProps {
 
 /**
  * This atom centers the content.
+ * @param props
+ * @constructor
  */
 function Inline(props: IInlineProps): React.ReactElement<IInlineProps> {
   /**
