@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Inline, IBadgeProps } from '../atoms';
 
 /**
  * The menu-item props type.
@@ -17,6 +18,11 @@ export interface IMenuItemProps extends React.InputHTMLAttributes<HTMLAnchorElem
   before?: React.ReactNode;
 
   /**
+   * THe badge content.
+   */
+  badge?: React.ComponentElement<IBadgeProps, any>;
+
+  /**
    * The after content.
    */
   after?: React.ReactNode;
@@ -29,7 +35,7 @@ export interface IMenuItemProps extends React.InputHTMLAttributes<HTMLAnchorElem
  * @constructor
  */
 export default function MenuItem(props: IMenuItemProps): React.ReactElement<IMenuItemProps> {
-  const { before, after, children: label, ...otherProps } = props;
+  const { before, children: label, badge, after, ...otherProps } = props;
 
   const Tag = styled.a`
 
@@ -43,15 +49,22 @@ export default function MenuItem(props: IMenuItemProps): React.ReactElement<IMen
   
   `;
 
+  const Badge = styled.div`
+
+  `;
+
   const After = styled.div`
 
   `;
 
   return (
     <Tag {...otherProps}>
-      {before && <Before>{before}</Before>}
-      <Label>{label}</Label>
-      {after && <After>{after}</After>}
+      <Inline>
+        {before && <Before>{before}</Before>}
+        <Label>{label}</Label>
+        {badge && <Badge>{badge}</Badge>}
+        {after && <After>{after}</After>}
+      </Inline>
     </Tag>
   );
 }
