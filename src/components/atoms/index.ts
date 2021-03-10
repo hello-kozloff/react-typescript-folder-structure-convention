@@ -24,3 +24,7 @@ export type { IBadgeProps } from './Badge';
 
 // Space
 export { default as Space } from './Space';
+
+// Dropdown
+export { default as Dropdown } from './Dropdown';
+export type { IDropdownProps } from './Dropdown';
