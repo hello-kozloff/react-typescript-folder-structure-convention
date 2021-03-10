@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { InputSearch } from './components/organisms';
 
 function WelcomeScreen(): React.ReactElement {
   return (
-    <h1 >Welcome to React Typescript Folder Structure convention</h1>
+    <InputSearch />
   );
 }
 
