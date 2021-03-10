@@ -13,3 +13,7 @@ export type { IInputProps } from './Input';
 // Inline
 export { default as Inline } from './Inline';
 export type { IInlineProps } from './Inline';
+
+// Margin
+export { default as Margin } from './Margin';
+export type { IMarginProps } from './Margin';
