@@ -31,10 +31,10 @@ function Margin(props: IMarginProps): React.ReactElement<IMarginProps> {
    */
   const Tag = styled.div<IMarginProps>`
     ${({ size }) => size && css`
-      margin-top: ${size[Repel.Top]} px;
-      margin-right: ${size[Repel.Right]} px;
-      margin-bottom: ${size[Repel.Bottom]} px;
-      margin-left: ${size[Repel.Left]} px;
+      margin-top: ${size[Repel.Top]}px;
+      margin-right: ${size[Repel.Right]}px;
+      margin-bottom: ${size[Repel.Bottom]}px;
+      margin-left: ${size[Repel.Left]}px;
     `};
   `;
 
