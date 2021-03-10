@@ -5,14 +5,15 @@ import {
   Margin, IMarginProps,
   Button, IButtonProps
 } from '../atoms';
+import { OmitChildren } from '../../types';
 
 /**
  * The input-button props type.
  */
 export interface IInputButton {
-  inlineProps?: Omit<IInlineProps, 'children'>;
+  inlineProps?: OmitChildren<IInlineProps>;
   inputProps?: IInputProps;
-  marginProps?: Omit<IMarginProps, 'children'>;
+  marginProps?: OmitChildren<IMarginProps>;
   buttonProps?: IButtonProps;
 }
 
