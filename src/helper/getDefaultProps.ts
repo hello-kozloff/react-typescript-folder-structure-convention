@@ -1,11 +1,11 @@
 /**
  * The function return default props.
- * @param provided
  * @param props
+ * @param defaultProps
  */
-export default function getDefaultProps<T extends object>(provided: T, props?: T): T {
+export default function getDefaultProps<T extends object>(props: T, defaultProps?: T): T {
   return {
-    ...provided,
+    ...defaultProps,
     ...props
   };
 }
