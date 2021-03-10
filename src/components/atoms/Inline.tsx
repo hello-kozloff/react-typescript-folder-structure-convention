@@ -41,10 +41,10 @@ function Inline(props: IInlineProps): React.ReactElement<IInlineProps> {
 
   return (
     <Tag
-      {...getDefaultProps<Omit<IInlineProps, 'children'>>(props, {
+      {...getDefaultProps<IInlineProps>(props, {
         direction: 'row'
       })}
-    >{props.children}</Tag>
+    />
   );
 }
 
