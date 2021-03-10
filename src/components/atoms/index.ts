@@ -21,3 +21,6 @@ export type { IMarginProps } from './Margin';
 // Badge
 export { default as Badge } from './Badge';
 export type { IBadgeProps } from './Badge';
+
+// Space
+export { default as Space } from './Space';
