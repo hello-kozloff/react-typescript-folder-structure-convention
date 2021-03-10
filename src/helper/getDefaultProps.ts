@@ -3,7 +3,7 @@
  * @param props
  * @param defaultProps
  */
-export default function getDefaultProps<T extends object>(props: T, defaultProps?: T): T {
+export default function getDefaultProps<T extends object>(props: T, defaultProps?: Omit<T, 'children'>): T {
   return {
     ...defaultProps,
     ...props
