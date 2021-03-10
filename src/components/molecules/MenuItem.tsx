@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Inline, IBadgeProps } from '../atoms';
+import { Inline, Margin, Space, IBadgeProps } from '../atoms';
 
 /**
  * The menu-item props type.
@@ -38,7 +38,7 @@ export default function MenuItem(props: IMenuItemProps): React.ReactElement<IMen
   const { before, children: label, badge, after, ...otherProps } = props;
 
   const Tag = styled.a`
-
+    display: block;
   `;
 
   const Before = styled.div`
@@ -59,11 +59,20 @@ export default function MenuItem(props: IMenuItemProps): React.ReactElement<IMen
 
   return (
     <Tag {...otherProps}>
-      <Inline>
-        {before && <Before>{before}</Before>}
+      <Inline stretched>
+        {before && (
+          <Margin size={[0, 14, 0, 0]}>
+            <Before>{before}</Before>
+          </Margin>
+        )}
         <Label>{label}</Label>
+        <Space />
         {badge && <Badge>{badge}</Badge>}
-        {after && <After>{after}</After>}
+        {after && (
+          <Margin size={[0, 0, 0, 13]}>
+            <After>{after}</After>
+          </Margin>
+        )}
       </Inline>
     </Tag>
   );
