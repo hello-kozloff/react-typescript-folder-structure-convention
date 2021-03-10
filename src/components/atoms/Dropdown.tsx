@@ -13,9 +13,9 @@ export interface IDropdownProps {
   anchor: React.ReactNode;
 
   /**
-   * The offset.
+   * The gap.
    */
-  offset?: number;
+  gap?: number;
 
   /**
    * The side.
@@ -45,23 +45,23 @@ const Content = styled.div<IDropdownProps>`
   position: absolute;
   z-index: 999;
   
-  ${({ side, offset }) => {
+  ${({ side, gap }) => {
     switch (side) {
       case 'top': return css`
         bottom: 100%;
-        padding-bottom: ${offset}px;
+        padding-bottom: ${gap}px;
       `;
       case 'right': return css`
         left: 100%;
-        padding-left: ${offset}px;
+        padding-left: ${gap}px;
       `;
       case 'bottom': return css`
         top: 100%;
-        padding-top: ${offset}px;
+        padding-top: ${gap}px;
       `;
       case 'left': return css`
         right: 100%;
-        padding-right: ${offset}px;
+        padding-right: ${gap}px;
       `;
     }
   }};
@@ -85,11 +85,10 @@ const Content = styled.div<IDropdownProps>`
  */
 export default function Dropdown(props: IDropdownProps): React.ReactElement<IDropdownProps> {
   const { anchor, children: content } = props;
-  console.log(props);
 
   const defaultProps = {
     anchor,
-    offset: 12,
+    gap: 12,
     side: props.side,
     align: props.align
   }
