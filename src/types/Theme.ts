@@ -1,9 +1,10 @@
 /**
- * The theme list.
+ * The theme type.
  */
-enum Theme {
-  Light = 'light',
-  Dark = 'dark'
+export default interface Theme {
+  [theme: string]: {
+    variables: {
+      [name: string]: string | number;
+    };
+  };
 }
-
-export default Theme;
