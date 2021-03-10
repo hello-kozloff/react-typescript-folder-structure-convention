@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Repel from '../../types/Repel';
 
 /**
@@ -11,7 +11,7 @@ export interface IMarginProps {
    * The repel size.
    * Top, Right, Bottom, Left
    */
-  size: (Repel.Top | Repel.Right | Repel.Bottom | Repel.Left)[];
+  size?: (Repel.Top | Repel.Right | Repel.Bottom | Repel.Left)[];
 
   /**
    * The tag content.
@@ -30,10 +30,12 @@ function Margin(props: IMarginProps): React.ReactElement<IMarginProps> {
    * The margin tag.
    */
   const Tag = styled.div<IMarginProps>`
-    margin-top: ${({ size }) => size[Repel.Top]}px;
-    margin-right: ${({ size }) => size[Repel.Right]}px;
-    margin-bottom: ${({ size }) => size[Repel.Bottom]}px;
-    margin-left: ${({ size }) => size[Repel.Left]}px;
+    ${({ size }) => size && css`
+      margin-top: ${size[Repel.Top]} px;
+      margin-right: ${size[Repel.Right]} px;
+      margin-bottom: ${size[Repel.Bottom]} px;
+      margin-left: ${size[Repel.Left]} px;
+    `};
   `;
 
   return <Tag {...props} />;
