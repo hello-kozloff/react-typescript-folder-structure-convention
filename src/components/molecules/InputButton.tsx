@@ -10,9 +10,9 @@ import {
  * The input-button props type.
  */
 export interface IInputButton {
-  inlineProps?: IInlineProps;
+  inlineProps?: Omit<IInlineProps, 'children'>;
   inputProps?: IInputProps;
-  marginProps?: IMarginProps;
+  marginProps?: Omit<IMarginProps, 'children'>;
   buttonProps?: IButtonProps;
 }
 
