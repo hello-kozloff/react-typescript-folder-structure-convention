@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { getDefaultProps } from '../../helper';
 
 /**
  * The input props type.
@@ -43,11 +44,13 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
     }};
   `;
 
-  return <Tag {...props} />
+  return (
+    <Tag
+      {...getDefaultProps<IInputProps>(props, {
+        theme: 'primary'
+      })}
+    />
+  );
 }
-
-Input.defaultProps = {
-  theme: 'primary'
-};
 
 export default Input;

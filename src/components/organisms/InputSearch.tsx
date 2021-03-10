@@ -1,5 +1,6 @@
 import React from 'react';
 import { InputButton, IInputButton } from '../molecules';
+import { getDefaultProps } from '../../helper';
 
 /**
  * The input-search props type.
@@ -17,22 +18,22 @@ export interface IInputSearchProps extends IInputButton {
  */
 function InputSearch(props: IInputSearchProps): React.ReactElement<IInputSearchProps> {
   return (
-    <InputButton {...props} />
+    <InputButton
+      {...getDefaultProps<IInputSearchProps>(props, {
+        inputProps: {
+          placeholder: 'Введите название'
+        },
+        marginProps: {
+          size: [0, 0, 0, 8]
+        },
+        buttonProps: {
+          children: (
+            <span>Поиск</span>
+          )
+        }
+      })}
+    />
   );
 }
-
-InputSearch.defaultProps = {
-  inputProps: {
-    placeholder: 'Введите название'
-  },
-  marginProps: {
-    size: [0, 0, 0, 8]
-  },
-  buttonProps: {
-    children: (
-      <span>Поиск</span>
-    )
-  }
-};
 
 export default InputSearch;

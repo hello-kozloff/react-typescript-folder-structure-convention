@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { getDefaultProps } from '../../helper';
 
 /**
  * The button props type.
@@ -59,12 +60,14 @@ function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
     }};
   `;
 
-  return <Tag {...props} />
+  return (
+    <Tag
+      {...getDefaultProps<IButtonProps>(props, {
+        theme: 'primary',
+        size: 'medium'
+      })}
+    />
+  )
 }
-
-Button.defaultProps = {
-  theme: 'primary',
-  size: 'medium'
-};
 
 export default Button;

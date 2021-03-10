@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getDefaultProps } from '../../helper';
 
 /**
  * The inline props type.
@@ -38,11 +39,13 @@ function Inline(props: IInlineProps): React.ReactElement<IInlineProps> {
     display: ${({ stretched }) => stretched ? 'flex' : 'inline-flex'};
   `;
 
-  return <Tag {...props} />;
+  return (
+    <Tag
+      {...getDefaultProps<Omit<IInlineProps, 'children'>>(props, {
+        direction: 'row'
+      })}
+    >{props.children}</Tag>
+  );
 }
-
-Inline.defaultProps = {
-  direction: 'row'
-};
 
 export default Inline;
