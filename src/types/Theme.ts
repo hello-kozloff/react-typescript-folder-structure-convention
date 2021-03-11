@@ -3,7 +3,7 @@
  */
 export default interface Theme {
   [theme: string]: {
-    variables: {
+    color: {
       [name: string]: string | number;
     };
   };
