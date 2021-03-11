@@ -7,11 +7,11 @@ import './styles/main.scss';
 import { InputSearch } from './components/organisms';
 
 function WelcomeScreen(): React.ReactElement {
-  return (
-    <ThemeProvider theme={theme}>
-      <InputSearch />
-    </ThemeProvider>
-  );
+  return <InputSearch />;
 }
 
-ReactDOM.render(<WelcomeScreen />, document.getElementById('root'));
+ReactDOM.render((
+  <ThemeProvider theme={theme}>
+    <WelcomeScreen />
+  </ThemeProvider>
+), document.getElementById('root'));
