@@ -20,7 +20,7 @@ export interface ITextProps {
   /**
    * THe text weight.
    */
-  weight?: 'thin' | 'light' | 'regular' | 'semi-bold' | 'bold' | 'extra-bold' | 'black';
+  weight?: 'thin' | 'light' | 'normal' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold' | 'black';
 
   /**
    * The height.
@@ -54,7 +54,7 @@ function Text(props: ITextProps): React.ReactElement<ITextProps> {
       {...getDefaultProps(props, {
         color: theme.dark.color.white,
         size: 16,
-        weight: 'regular',
+        weight: 'normal',
         height: 22
       })}
     />
