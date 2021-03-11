@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, ThemeContext } from 'styled-components';
 import { getDefaultProps } from '../../helper';
 
 /**
@@ -33,6 +33,8 @@ export interface IButtonProps extends Omit<React.InputHTMLAttributes<HTMLButtonE
  * @constructor
  */
 function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
+  const theme = React.useContext(ThemeContext);
+
   /**
    * The button tag.
    */
@@ -42,9 +44,29 @@ function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
     grid-auto-flow: column;
     display: inline-grid;
     
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: transparent;
+    font: inherit;
+    transition: ${theme.dark.transition.default};
+    cursor: pointer;
+    outline: none;
+    
     ${({ mode }) => {
       switch (mode) {
-        case 'primary': return css``;
+        case 'primary': return css`
+          color: ${theme.dark.color.white};
+          background: ${theme.dark.color.primary};
+          
+          &:hover, &:focus {
+            box-shadow: 3px 8px 20px rgba(50, 100, 239, .4);
+          }
+          
+          &:active {
+            background: rgb(50, 94, 220);
+          }
+        `;
         case 'secondary': return css``;
       }
     }};
@@ -53,7 +75,11 @@ function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
       switch (size) {
         case 'extra-small': return css``;
         case 'small': return css``;
-        case 'medium': return css``;
+        case 'medium': return css`
+          padding: 12px 30px;
+          line-height: 24px;
+          font-size: 16px;
+        `;
         case 'large': return css``;
         case 'extra-large': return css``;
       }
