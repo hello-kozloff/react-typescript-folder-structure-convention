@@ -14,10 +14,10 @@ export interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
   type?: JSX.IntrinsicElements['input']['type'];
 
   /**
-   * The input theme property type.
+   * The input mode property type.
    * 'primary' | 'secondary'
    */
-  theme?: 'primary' | 'secondary';
+  mode?: 'primary' | 'secondary';
 
 }
 
@@ -36,8 +36,8 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
     grid-auto-flow: column;
     display: inline-grid;
     
-    ${({ theme }) => {
-      switch (theme) {
+    ${({ mode }) => {
+      switch (mode) {
         case 'primary': return css``;
         case 'secondary': return css``;
       }
@@ -47,7 +47,7 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
   return (
     <Tag
       {...getDefaultProps<IInputProps>(props, {
-        theme: 'primary'
+        mode: 'primary'
       })}
     />
   );
