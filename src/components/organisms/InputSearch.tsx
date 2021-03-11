@@ -20,11 +20,14 @@ function InputSearch(props: IInputSearchProps): React.ReactElement<IInputSearchP
   return (
     <InputButton
       {...getDefaultProps<IInputSearchProps>(props, {
+        inlineProps: {
+          stretched: true
+        },
         inputProps: {
           placeholder: 'Введите название'
         },
         marginProps: {
-          size: [0, 0, 0, 8]
+          size: [0, 0, 0, 10]
         },
         buttonProps: {
           children: (
