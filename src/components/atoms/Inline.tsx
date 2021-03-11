@@ -19,6 +19,11 @@ export interface IInlineProps {
   stretched?: boolean;
 
   /**
+   * The content align.
+   */
+  align?: 'flex-start' | 'center' | 'flex-end';
+
+  /**
    * The tag content.
    */
   children: React.ReactNode | React.ReactNodeArray;
@@ -35,6 +40,7 @@ function Inline(props: IInlineProps): React.ReactElement<IInlineProps> {
    * The inline tag.
    */
   const Tag = styled.div<IInlineProps>`
+    align-items: ${({ align }) => align};
     flex-direction: ${({ direction }) => direction};
     display: ${({ stretched }) => stretched ? 'flex' : 'inline-flex'};
   `;
