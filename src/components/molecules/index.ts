@@ -13,3 +13,7 @@ export type { IMenuItemProps } from './MenuItem';
 // InputContainer
 export { default as InputContainer } from './InputContainer';
 export type { IInputContainerProps } from './InputContainer';
+
+// Row
+export { default as Row } from './Row';
+export type { IRowProps } from './Row';
