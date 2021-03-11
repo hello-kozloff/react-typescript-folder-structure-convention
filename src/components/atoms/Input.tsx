@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, ThemeContext } from 'styled-components';
 import { getDefaultProps } from '../../helper';
 
 /**
@@ -27,6 +27,8 @@ export interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
  * @constructor
  */
 function Input(props: IInputProps): React.ReactElement<IInputProps> {
+  const theme = React.useContext(ThemeContext);
+
   /**
    * The input tag.
    */
@@ -35,13 +37,40 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
     align-items: center;
     grid-auto-flow: column;
     display: inline-grid;
+
+    padding: 15px 16px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: ${theme.dark.transition.default};
+    border-radius: 5px;
+    outline: none;
+    
+    line-height: 18px;
+    font-size: 16px;
+    color: ${theme.dark.color.white};
     
     ${({ mode }) => {
       switch (mode) {
-        case 'primary': return css``;
-        case 'secondary': return css``;
+        case 'primary': return css`
+          background: ${theme.dark.color.dark};
+        `;
+        case 'secondary': return css`
+          background: ${theme.dark.color.black_07};
+        `;
       }
     }};
+    
+    &::placeholder {
+      transition: ${theme.dark.transition.fast};
+    }
+    
+    &:focus {
+      border-color: ${theme.dark.color.primary};
+    
+      &::placeholder {
+        opacity: 0;
+      }
+    }
   `;
 
   return (
