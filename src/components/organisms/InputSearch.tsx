@@ -24,6 +24,7 @@ function InputSearch(props: IInputSearchProps): React.ReactElement<IInputSearchP
           stretched: true
         },
         inputProps: {
+          stretched: true,
           placeholder: 'Введите название'
         },
         marginProps: {
