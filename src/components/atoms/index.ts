@@ -28,3 +28,6 @@ export { default as Space } from './Space';
 // Dropdown
 export { default as Dropdown } from './Dropdown';
 export type { IDropdownProps } from './Dropdown';
+
+// Text
+export { default as Text } from './Text';
