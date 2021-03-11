@@ -19,6 +19,11 @@ export interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
    */
   mode?: 'primary' | 'secondary';
 
+  /**
+   * The input can be stretched.
+   */
+  stretched?: boolean;
+
 }
 
 /**
@@ -33,6 +38,8 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
    * The input tag.
    */
   const Tag = styled.input<IInputProps>`
+    width: ${({ stretched }) => stretched && '100%'};
+
     gap: 8px;
     align-items: center;
     grid-auto-flow: column;
