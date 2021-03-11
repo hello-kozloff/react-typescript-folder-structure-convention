@@ -38,7 +38,7 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
     grid-auto-flow: column;
     display: inline-grid;
 
-    padding: 15px 16px;
+    padding: 14px 16px;
     box-sizing: border-box;
     border: 1px solid transparent;
     transition: ${theme.dark.transition.default};
@@ -46,7 +46,7 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
     outline: none;
     
     line-height: 18px;
-    font-size: 16px;
+    font: inherit;
     color: ${theme.dark.color.white};
     
     ${({ mode }) => {
