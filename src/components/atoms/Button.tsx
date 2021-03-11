@@ -14,10 +14,10 @@ export interface IButtonProps extends Omit<React.InputHTMLAttributes<HTMLButtonE
   type?: JSX.IntrinsicElements['button']['type'];
 
   /**
-   * The button theme property type.
+   * The button mode property type.
    * 'primary' | 'secondary'
    */
-  theme?: 'primary' | 'secondary';
+  mode?: 'primary' | 'secondary';
 
   /**
    * The button size property type.
@@ -42,8 +42,8 @@ function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
     grid-auto-flow: column;
     display: inline-grid;
     
-    ${({ theme }) => {
-      switch (theme) {
+    ${({ mode }) => {
+      switch (mode) {
         case 'primary': return css``;
         case 'secondary': return css``;
       }
@@ -63,7 +63,7 @@ function Button(props: IButtonProps): React.ReactElement<IButtonProps> {
   return (
     <Tag
       {...getDefaultProps<IButtonProps>(props, {
-        theme: 'primary',
+        mode: 'primary',
         size: 'medium'
       })}
     />
