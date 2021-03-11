@@ -31,3 +31,7 @@ export type { IDropdownProps } from './Dropdown';
 
 // Text
 export { default as Text } from './Text';
+
+// Column
+export { default as Column } from './Column';
+export type { IColumnProps } from './Column';
