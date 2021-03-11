@@ -17,6 +17,11 @@ const theme: Theme = {
       //
       dark: 'rgb(48, 48, 48)',
       dark_05: 'rgba(48, 48, 48, .5)',
+    },
+    transition: {
+      fast: '.15s ease-out',
+      default: '.25s ease-out',
+      long: '.35s ease-out',
     }
   }
 };
