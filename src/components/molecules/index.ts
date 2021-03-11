@@ -17,3 +17,7 @@ export type { IInputContainerProps } from './InputContainer';
 // Row
 export { default as Row } from './Row';
 export type { IRowProps } from './Row';
+
+// UploadImage
+export { default as UploadImage } from './UploadImage';
+export type { IUploadImageProps } from './UploadImage';
