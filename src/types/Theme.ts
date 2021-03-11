@@ -3,7 +3,7 @@
  */
 export default interface Theme {
   [theme: string]: {
-    color: {
+    [group: string]: {
       [name: string]: string | number;
     };
   };
