@@ -47,3 +47,7 @@ export type { IInputTitleProps } from './InputTitle';
 // InputDescription
 export { default as InputDescription } from './InputDescription';
 export type { IInputDescriptionProps } from './InputDescription';
+
+// Width
+export { default as Width } from './Width';
+export type { IWidthProps } from './Width';
