@@ -4,28 +4,31 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import './styles/main.scss';
 
-import { Input, Column } from './components/atoms';
-import { InputContainer, Row } from './components/molecules';
+import { Inline, Margin, Image, InputTitle, InputDescription } from './components/atoms';
+import { UploadImage } from './components/molecules';
 
-function WelcomeScreen(): React.ReactElement {
+function CourseHeader(): React.ReactElement {
   return (
-    <Row gap={30}>
-      <Column>
-        <InputContainer before="Промокод" after="Оставьте поле пустым, если бессрочно" required>
-          <Input stretched />
-        </InputContainer>
-      </Column>
-      <Column>
-        <InputContainer before="Промокод" after="Оставьте поле пустым, если бессрочно" required>
-          <Input stretched />
-        </InputContainer>
-      </Column>
-    </Row>
+    <Inline align="flex-start" stretched>
+      <Margin size={[0, 30, 0, 0]}>
+        <Inline direction="column">
+          <UploadImage radius="5px">
+            <Image width="300px" height="170px" alt="Изображение курса" />
+          </UploadImage>
+        </Inline>
+      </Margin>
+      <Inline direction="column" stretched>
+        <InputTitle />
+        <Margin size={[16, 0, 0, 0]}>
+          <InputDescription />
+        </Margin>
+      </Inline>
+    </Inline>
   );
 }
 
 ReactDOM.render((
   <ThemeProvider theme={theme}>
-    <WelcomeScreen />
+    <CourseHeader />
   </ThemeProvider>
 ), document.getElementById('root'));
