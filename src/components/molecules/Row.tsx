@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Inline, Margin, IColumnProps } from '../atoms';
+import { Width, Inline, Margin, IColumnProps } from '../atoms';
 
 /**
  * The row props type.
@@ -32,14 +32,12 @@ function Row(props: IRowProps): React.ReactElement<IRowProps> {
    * @param column
    */
   function renderColumn(column: React.ComponentElement<IColumnProps, any>): JSX.Element {
-    const MarginContainer = styled(Margin)`
-      width: 100%;
-    `;
-
     return (
-      <MarginContainer size={[0, splitGap, 0, splitGap]}>
-        {column}
-      </MarginContainer>
+      <Width size="100%">
+        <Margin size={[0, splitGap, 0, splitGap]}>
+          {column}
+        </Margin>
+      </Width>
     );
   }
 
