@@ -55,3 +55,7 @@ export type { IWidthProps } from './Width';
 // Padding
 export { default as Padding } from './Padding';
 export type { IPaddingProps } from './Padding';
+
+// Padding
+export { default as Container } from './Container';
+export type { IContainerProps } from './Container';
