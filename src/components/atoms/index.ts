@@ -51,3 +51,7 @@ export type { IInputDescriptionProps } from './InputDescription';
 // Width
 export { default as Width } from './Width';
 export type { IWidthProps } from './Width';
+
+// Padding
+export { default as Padding } from './Padding';
+export type { IPaddingProps } from './Padding';
