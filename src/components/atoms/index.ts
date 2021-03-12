@@ -39,3 +39,11 @@ export type { IColumnProps } from './Column';
 // Image
 export { default as Image } from './Image';
 export type { IImageProps } from './Image';
+
+// InputTitle
+export { default as InputTitle } from './InputTitle';
+export type { IInputTitleProps } from './InputTitle';
+
+// InputDescription
+export { default as InputDescription } from './InputDescription';
+export type { IInputDescriptionProps } from './InputDescription';
