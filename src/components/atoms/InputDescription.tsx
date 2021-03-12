@@ -18,6 +18,8 @@ export default function InputDescription(props: IInputDescriptionProps): React.R
     
     line-height: 22px;
     font-size: 14px;
+    
+    width: 100%;
   `;
 
   return (
