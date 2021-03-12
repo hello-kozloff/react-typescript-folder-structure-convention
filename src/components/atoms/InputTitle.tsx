@@ -19,8 +19,6 @@ export default function InputTitle(props: IInputTitleProps): React.ReactElement<
     line-height: 30px;
     font-weight: bold;
     font-size: 24px;
-    
-    width: 100%;
   `;
 
   return (
