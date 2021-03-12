@@ -40,6 +40,7 @@ function Inline(props: IInlineProps): React.ReactElement<IInlineProps> {
    * The inline tag.
    */
   const Tag = styled.div<IInlineProps>`
+    width: ${({ stretched }) => stretched && '100%'};
     align-items: ${({ align }) => align};
     flex-direction: ${({ direction }) => direction};
     display: ${({ stretched }) => stretched ? 'flex' : 'inline-flex'};
