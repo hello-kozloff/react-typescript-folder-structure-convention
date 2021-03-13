@@ -22,6 +22,9 @@ export type { IRowProps } from './Row';
 export { default as UploadImage } from './UploadImage';
 export type { IUploadImageProps } from './UploadImage';
 
+// CourseSettings
+export { default as CourseSettings } from './CourseSettings';
+
 // ToggleContent
 export { default as ToggleContent } from './ToggleContent';
 export type { IToggleContentProps } from './ToggleContent';
