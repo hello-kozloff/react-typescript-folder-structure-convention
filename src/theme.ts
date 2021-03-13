@@ -7,6 +7,7 @@ const theme: Theme = {
       white_80: 'rgba(255, 255, 255, .80)',
       white_40: 'rgba(255, 255, 255, .40)',
       white_30: 'rgba(255, 255, 255, .30)',
+      white_20: 'rgba(255, 255, 255, .20)',
       white_15: 'rgba(255, 255, 255, .15)',
       white_08: 'rgba(255, 255, 255, .08)',
       //
@@ -14,6 +15,7 @@ const theme: Theme = {
       //
       black: 'rgb(35, 35, 35)',
       black_90: 'rgba(35, 35, 35, .90)',
+      black_70: 'rgba(35, 35, 35, .70)',
       black_40: 'rgba(35, 35, 35, .40)',
       black_30: 'rgba(35, 35, 35, .30)',
       black_15: 'rgba(35, 35, 35, .15)',
