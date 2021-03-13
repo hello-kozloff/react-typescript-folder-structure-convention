@@ -14,6 +14,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/router5": "^5.0.0",
     "@types/styled-components": "^5.1.7",
     "lodash": "^4.17.21",
     "node-sass": "^5.0.0",
@@ -22,6 +23,7 @@
     "react-scripts": "4.0.3",
     "react-slidedown": "^2.4.5",
     "reset.css": "^2.0.2",
+    "router5": "^8.0.1",
     "styled-components": "^5.2.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
