@@ -16,7 +16,8 @@ import {
   Text,
   Space,
   Box,
-  Column
+  Column,
+  Toggle
 } from './components/atoms';
 
 import {
@@ -33,6 +34,9 @@ function CourseHeader(): React.ReactElement {
       <Container>
         <Margin size={[40, 0, 35, 0]}>
           <Inline align="center" stretched>
+            <Margin size={[0, 14, 0, 0]}>
+              <Toggle />
+            </Margin>
             <Text size={18} weight="medium">Опубликован</Text>
             <Space />
             <Text color={theme.dark.color.white_40}>12 декабря 2020 - 12 января 2021</Text>
