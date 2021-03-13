@@ -4,7 +4,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { Padding, Text } from '../atoms';
 
 /**
- * The tab atom.
+ * The tab molecule.
  */
 export interface ITabProps {
 
