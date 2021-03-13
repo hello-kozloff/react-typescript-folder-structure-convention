@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Margin, Padding, Tab } from '../atoms';
-import { CourseSettings, TabContainer, CourseHeader } from '../molecules';
+import { Container, Margin, Padding } from '../atoms';
+import { CourseSettings, Tab, TabContainer, CourseHeader } from '../molecules';
 
 /**
  * The course-editor organism.
@@ -20,7 +20,6 @@ export default function CourseEditor(): React.ReactElement {
               <h1>Hello world</h1>
             </Tab>
           </TabContainer>
-          <CourseSettings />
         </Margin>
       </Container>
     </Padding>

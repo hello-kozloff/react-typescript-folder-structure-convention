@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { useRoute } from 'react-router5';
-import { Inline, Column, Margin, Tab, ITabProps } from '../atoms';
-import { Row } from '../molecules';
+import { Inline, Column, Margin } from '../atoms';
+import { Row, Tab, ITabProps } from '../molecules';
 
 /**
  * The tab-container type.

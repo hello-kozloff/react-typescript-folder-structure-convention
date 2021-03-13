@@ -67,7 +67,3 @@ export type { IBoxProps } from './Box';
 // Toggle
 export { default as Toggle } from './Toggle';
 export type { IToggleProps } from './Toggle';
-
-// Tab
-export { default as Tab } from './Tab';
-export type { ITabProps } from './Tab';
