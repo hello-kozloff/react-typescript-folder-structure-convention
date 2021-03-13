@@ -12,6 +12,7 @@ const theme: Theme = {
       white_08: 'rgba(255, 255, 255, .08)',
       //
       primary: 'rgb(50, 100, 239)',
+      primary_30: 'rgba(50, 100, 239, .30)',
       //
       black: 'rgb(35, 35, 35)',
       black_90: 'rgba(35, 35, 35, .90)',
