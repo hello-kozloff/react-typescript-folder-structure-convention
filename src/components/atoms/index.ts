@@ -63,3 +63,7 @@ export type { IContainerProps } from './Container';
 // Box
 export { default as Box } from './Box';
 export type { IBoxProps } from './Box';
+
+// Toggle
+export { default as Toggle } from './Toggle';
+export type { IToggleProps } from './Toggle';
