@@ -7,11 +7,17 @@ const routes: Route[] = [
     children: [
       {
         name: 'add',
-        path: '/add'
+        path: '/add?tab',
+        defaultParams: {
+          tab: 'settings'
+        }
       },
       {
         name: 'edit',
-        path: '/:id/edit'
+        path: '/:id/edit?tab',
+        defaultParams: {
+          tab: 'settings'
+        }
       }
     ]
   }
