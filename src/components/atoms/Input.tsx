@@ -60,9 +60,17 @@ function Input(props: IInputProps): React.ReactElement<IInputProps> {
       switch (mode) {
         case 'primary': return css`
           background: ${theme.dark.color.dark};
+          
+          &::placeholder {
+            color: ${theme.dark.color.white_40};
+          }
         `;
         case 'secondary': return css`
-          background: ${theme.dark.color.black_07};
+          background: ${theme.dark.color.black_70};
+          
+          &::placeholder {
+            color: ${theme.dark.color.white_20};
+          }
         `;
       }
     }};
