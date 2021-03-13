@@ -46,7 +46,7 @@ function InputContainer(props: IInputContainerProps): React.ReactElement<IInputC
         <Margin size={[0, 0, 10, 0]}>
           <Inline align="center">
             <Text
-              color={theme.dark.color.white_08}
+              color={theme.dark.color.white_80}
               size={14}
               weight="medium"
               height={17}>{props.before}</Text>
