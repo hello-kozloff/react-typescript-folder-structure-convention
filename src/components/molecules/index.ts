@@ -31,3 +31,7 @@ export { default as CourseSettings } from './CourseSettings';
 // ToggleContent
 export { default as ToggleContent } from './ToggleContent';
 export type { IToggleContentProps } from './ToggleContent';
+
+// TabContainer
+export { default as TabContainer } from './TabContainer';
+export type { ITabContainerProps } from './TabContainer';
