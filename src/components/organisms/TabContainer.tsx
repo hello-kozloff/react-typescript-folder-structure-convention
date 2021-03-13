@@ -17,7 +17,7 @@ export interface ITabContainerProps {
 }
 
 /**
- * The tab-container molecule.
+ * The tab-container organism.
  * @param props
  * @constructor
  */

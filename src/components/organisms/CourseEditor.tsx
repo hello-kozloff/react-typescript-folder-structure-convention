@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Margin, Padding } from '../atoms';
-import { CourseSettings, Tab, TabContainer, CourseHeader } from '../molecules';
+import { CourseSettings, Tab, CourseHeader } from '../molecules';
+import { TabContainer } from '../organisms';
 
 /**
  * The course-editor organism.
