@@ -59,3 +59,7 @@ export type { IPaddingProps } from './Padding';
 // Padding
 export { default as Container } from './Container';
 export type { IContainerProps } from './Container';
+
+// Box
+export { default as Box } from './Box';
+export type { IBoxProps } from './Box';
