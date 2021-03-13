@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Width, Inline, Margin, IColumnProps } from '../atoms';
+import { Width, IColumnProps } from '../atoms';
 
 /**
  * The row props type.
@@ -25,8 +25,6 @@ export interface IRowProps {
  * @constructor
  */
 function Row(props: IRowProps): React.ReactElement<IRowProps> {
-  const splitGap = props.gap ? props.gap / 2 : 0;
-
   /**
    * The function render column with margin.
    * @param column
@@ -34,9 +32,7 @@ function Row(props: IRowProps): React.ReactElement<IRowProps> {
   function renderColumn(column: React.ComponentElement<IColumnProps, any>): JSX.Element {
     return (
       <Width size="100%">
-        <Margin size={[0, splitGap, 0, splitGap]}>
-          {column}
-        </Margin>
+        {column}
       </Width>
     );
   }
@@ -50,15 +46,16 @@ function Row(props: IRowProps): React.ReactElement<IRowProps> {
     }) : renderColumn(props.children);
   }
 
-  const InlineContainer = styled(Inline)`
-    margin-left: ${splitGap}px;
-    margin-right: ${splitGap}px;
+  const Tag = styled.div<IRowProps>`
+    gap: ${({ gap }) => gap + 'px'};
+    grid-auto-flow: column;
+    display: grid;
   `;
 
   return (
-    <InlineContainer stretched>
+    <Tag {...props}>
       {renderColumns()}
-    </InlineContainer>
+    </Tag>
   );
 }
 
